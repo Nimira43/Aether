@@ -14,3 +14,5 @@ if (process.env.NODE_ENV === 'local') {
   }))
 }
 
+const PORT = process.env.PORT
+app.listen(PORT, () => console.log(`Serving running on Port ${PORT}`))
