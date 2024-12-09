@@ -1,2 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Great+Vibes&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
+* {
+  font-family: 'Merriweather', serif;
+}
+
+:root {
+  --primary: #012222;
+  --secondary: #2aa9a9;
+  --third: #ff4500;
+  --dark: #111;
+  --light: #fffaf0;
+  --grey-dk: #333;
+  --grey-lg: #ccc;
+  --grey-xl: #eee;
+  --size-1: 1px;
+  --size-2: 2px;
+  --size-3: 3px;
+  --size-4: 4px;
+  --size-5: 5px;
+  --size-xs: 6px;
+  --size-sm: 8px;
+  --size-md: 10px;
+  --size-lg: 12px;
+  --size-xl: 15px;
+  --size-xxl: 20px;
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+.logo {
+  font-family: 'Great Vibes', cursive;
+}
+
+.heading {
+  font-family: 'Cinzel', serif;
+}
