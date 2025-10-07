@@ -1,6 +1,15 @@
-const App = () => {
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Root />
+  }
+])
+
+function App() {
   return ( 
-    <div className='bg-dark text-main text-4xl logo p-6'>Aether</div>
+    <RouterProvider router={router} />
   )
 }
  
