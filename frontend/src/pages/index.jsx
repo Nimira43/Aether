@@ -12,11 +12,14 @@ const Index = () => {
             ? 'visible opacity-30' 
             : 'invisible opacity-30'
           } 
-          transition-all duration-500 h-screen fixed bg-red-300 flex justify-center items-center
+          transition-all duration-500 h-screen fixed bg-light flex justify-center items-center
         `}
       >
         <div className='w-[350px] m-auto px-6 py-4 relative'>
-          <div>
+          <div 
+            onClick={() => setShow(false)}
+            className='absolute right-4 top-4 text-xl cursor-pointer text-main'
+          >
             <LiaTimesSolid />
           </div>
         </div>
@@ -29,8 +32,17 @@ const Index = () => {
               <h1 className='logo text-light text-4xl'>Aether</h1>
             </div>
             <div className='flex gap-4'>
-              <button className='main-btn'>Login</button>
-              <button className='main-btn'>Register</button>
+              <button 
+                className='main-btn'
+                onClick={() => setShow(true)}
+              >
+                Login
+              </button>
+              <button 
+                className='main-btn'
+              >
+                Register
+              </button>
             </div>
           </div>
         </div>
