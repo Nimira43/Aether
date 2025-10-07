@@ -1,7 +1,9 @@
 const express = require('express')
 const app = express()
 const dotenv = require('dotenv')
-const cors = requires('cors')
+const cors = require('cors')
+
+dotenv.config()
 
 if (process.env.NODE_ENV === 'local') {
   app.use(cors({
