@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { LiaTimesSolid } from 'react-icons/lia'
 
 const Index = () => {
   const [show, setShow] = useState(false)
@@ -11,11 +12,16 @@ const Index = () => {
             ? 'visible opacity-30' 
             : 'invisible opacity-30'
           } 
-          transition-all duration-500 h-screen fixed bg-light flex justify-center items-center
+          transition-all duration-500 h-screen fixed bg-red-300 flex justify-center items-center
         `}
       >
-
+        <div className='w-[350px] m-auto px-6 py-4 relative'>
+          <div>
+            <LiaTimesSolid />
+          </div>
+        </div>
       </div>
+
       <div className='bg-main shadow-md'>
         <div className='w-[93%] m-auto py-3'>
           <div className='flex justify-between items-center'>
