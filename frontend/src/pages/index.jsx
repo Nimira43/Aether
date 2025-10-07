@@ -1,4 +1,8 @@
+import { useState } from 'react'
+
 const Index = () => {
+  const [show, setShow] = useState(false)
+  
   return (
     <div className='bg-light min-h-screen w-full'>
       <div className='bg-main shadow-md'>
