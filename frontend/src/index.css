@@ -22,7 +22,7 @@
 }
 
 .dark-btn {
-  @apply py-2 w-48 text-center border-grey-dark border-2 text-grey-dark uppercase font-medium hover:bg-main hover:text-light hover:border-main hover-transition;
+  @apply py-2 text-center border-grey-dark border-2 text-grey-dark uppercase font-medium hover:bg-main hover:text-light hover:border-main hover-transition;
 }
 
 .input-wrapper {

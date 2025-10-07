@@ -34,7 +34,7 @@ const Index = () => {
           >
             <LiaTimesSolid />
           </div>
-          <h2 className='text-center pb-4 logo text-main text-3xl'>Login / Register</h2>
+          <h2 className='text-center pb-4 logo text-main text-4xl'>Login / Register</h2>
           <form>
             <div className='input-wrapper'>
               <label htmlFor='email'>Email</label>
@@ -57,6 +57,13 @@ const Index = () => {
                 value={state.password}
                 className='input-field' 
               />
+            </div>
+            <div className='py-4'>
+              <button
+                className='dark-btn w-full'
+              >
+                Submit
+              </button>
             </div>
           </form>
         </div>
@@ -88,7 +95,7 @@ const Index = () => {
         <div className='py-[170px] flex justify-center items-center flex-col gap-6'>
           <h2 className='logo text-main text-6xl font-semibold text-center'>Where ideas awaken and colours speak</h2>
           <span className='text-grey-dark font-medium text-xl text-center'>Aether makes it easy to create and share professional designs.</span>
-          <button className='dark-btn'>Register</button>
+          <button className='dark-btn w-48'>Register</button>
         </div>
       </div>
 
