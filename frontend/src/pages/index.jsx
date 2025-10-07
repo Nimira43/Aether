@@ -16,7 +16,9 @@ const Index = () => {
       </div>
       <div className='w-full h-full justify-center items-center p-4'>
         <div className='py-[170px] flex justify-center items-center flex-col gap-6'>
-          <h2 className='logo text-main text-6xl'>Where ideas awaken and colours speak</h2>
+          <h2 className='logo text-main text-6xl font-semibold'>Where ideas awaken and colours speak</h2>
+          <span className='text-grey-dark font-medium text-xl'>Aether makes it easy to create and share professional designs.</span>
+          <button className='dark-btn'>Register</button>
         </div>
       </div>
 
