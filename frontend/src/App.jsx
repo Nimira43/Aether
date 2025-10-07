@@ -1,6 +1,6 @@
 const App = () => {
   return ( 
-    <div className='bg-black text-orange-400 text-4xl p-6'>Aether</div>
+    <div className='bg-dark text-main text-4xl logo p-6'>Aether</div>
   )
 }
  
