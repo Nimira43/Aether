@@ -5,16 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Nimira43/Virtuoso.git"
-  },
   "author": "Nick Rabone",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Nimira43/Virtuoso/issues"
-  },
-  "homepage": "https://github.com/Nimira43/Virtuoso#readme",
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
