@@ -7,12 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        'main': '#ff4500',
-  			'support': '#008080',
-  			'light': '#fffcfa',
+        'main': '#2965dc',
+        'main-light': '#8ec5f6',
+  			'support': '#f62222',
+  			'light': '#fffdfa',
   			'dark': '#111',
   			'grey-dark': '#333',
-  			'grey-medium': '#898989',
+  			'grey-medium': '#999',
   			'grey-light': '#ccc',
   			'grey-light-extra': '#eee',
       },
