@@ -27,16 +27,16 @@ const Index = () => {
           transition-all duration-500 h-screen fixed bg-light flex justify-center items-center
         `}
       >
-        <div className='w-[350px] bg-light m-auto px-6 py-4 relative border border-main shadow-md'>
+        <div className='w-[350px] bg-light m-auto px-6 py-4 relative border border-grey-medium shadow-md'>
           <div 
             onClick={() => setShow(false)}
-            className='absolute right-4 top-4 text-xl cursor-pointer text-main'
+            className='absolute right-4 top-4 text-xl cursor-pointer text-grey-dark'
           >
             <LiaTimesSolid />
           </div>
           <h2 className='text-center pb-4 logo text-main text-3xl'>Login / Register</h2>
           <form>
-            <div className='flex flex-col gap-3 mb-3 text-grey-dark'>
+            <div className='input-wrapper'>
               <label htmlFor='email'>Email</label>
               <input 
                 onChange={inputHandle}
@@ -44,7 +44,18 @@ const Index = () => {
                 name='email'
                 id='email' 
                 value={state.email}
-                className='px-3 py-2 outline-none border border-grey-medium focus:border-grey-dark' 
+                className='input-field' 
+              />
+            </div>
+            <div className='input-wrapper'>
+              <label htmlFor='password'>Password</label>
+              <input 
+                onChange={inputHandle}
+                type='password' 
+                name='password'
+                id='password' 
+                value={state.password}
+                className='input-field' 
               />
             </div>
           </form>
