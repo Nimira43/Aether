@@ -14,6 +14,12 @@ const Index = () => {
           </div>
         </div>
       </div>
+      <div className='w-full h-full justify-center items-center p-4'>
+        <div className='py-[170px] flex justify-center items-center flex-col gap-6'>
+          <h2 className='logo text-main text-6xl'>Where ideas awaken and colours speak</h2>
+        </div>
+      </div>
+
     </div>
   )
 }
