@@ -9,6 +9,13 @@ const Index = () => {
     password: ''
   })
 
+  const inputHandle = (e) => {
+    setState({
+      ...state,
+      [e.target.name]: e.target.value
+    })
+  }
+
   return (
     <div className='bg-light min-h-screen w-full'>
       <div 
@@ -32,9 +39,11 @@ const Index = () => {
             <div className='flex flex-col gap-3 mb-3 text-grey-dark'>
               <label htmlFor='email'>Email</label>
               <input 
+                onChange={inputHandle}
                 type='email' 
                 name='email'
                 id='email' 
+                value={state.email}
                 className='px-3 py-2 outline-none border border-grey-medium focus:border-grey-dark' 
               />
             </div>
