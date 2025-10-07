@@ -9,19 +9,31 @@ const Index = () => {
       <div 
         className={`
           w-screen ${show 
-            ? 'visible opacity-30' 
+            ? 'visible opacity-100' 
             : 'invisible opacity-30'
           } 
           transition-all duration-500 h-screen fixed bg-light flex justify-center items-center
         `}
       >
-        <div className='w-[350px] m-auto px-6 py-4 relative'>
+        <div className='w-[350px] bg-light m-auto px-6 py-4 relative border border-main shadow-md'>
           <div 
             onClick={() => setShow(false)}
             className='absolute right-4 top-4 text-xl cursor-pointer text-main'
           >
             <LiaTimesSolid />
           </div>
+          <h2 className='text-center logo text-main text-3xl'>Login / Register</h2>
+          <form>
+            <div className='flex flex-col gap-3 mb-3 text-grey-dark'>
+              <label htmlFor='email'>Email</label>
+              <input 
+                type='email' 
+                name='email'
+                id='email' 
+                className='px-3 py-2 outline-none border border-grey-medium focus:border-grey-dark' 
+              />
+            </div>
+          </form>
         </div>
       </div>
 
