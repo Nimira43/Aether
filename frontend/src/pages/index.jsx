@@ -3,6 +3,11 @@ import { LiaTimesSolid } from 'react-icons/lia'
 
 const Index = () => {
   const [show, setShow] = useState(false)
+  const [state, setState] = useState({
+    name: '',
+    email: '',
+    password: ''
+  })
 
   return (
     <div className='bg-light min-h-screen w-full'>
@@ -22,7 +27,7 @@ const Index = () => {
           >
             <LiaTimesSolid />
           </div>
-          <h2 className='text-center logo text-main text-3xl'>Login / Register</h2>
+          <h2 className='text-center pb-4 logo text-main text-3xl'>Login / Register</h2>
           <form>
             <div className='flex flex-col gap-3 mb-3 text-grey-dark'>
               <label htmlFor='email'>Email</label>
