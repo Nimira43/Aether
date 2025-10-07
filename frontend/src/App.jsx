@@ -1,9 +1,10 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Index from './pages'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Root />
+    element: <Index />
   }
 ])
 
