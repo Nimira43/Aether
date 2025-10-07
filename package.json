@@ -1,24 +1,24 @@
 {
-  "name": "virtuoso",
+  "name": "aether",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon server.js",
-    "client": "npm run dev --prefix frontend",
-    "start": "node server.js",
-    "dev": "concurrently \" npm run server \" \" npm run client \" "
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nimira43/Virtuoso.git"
   },
   "author": "Nick Rabone",
-  "license": "MIT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nimira43/Virtuoso/issues"
+  },
+  "homepage": "https://github.com/Nimira43/Virtuoso#readme",
   "description": "",
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "mongoose": "^8.8.4",
-    "nodemon": "^3.1.7"
-  },
-  "devDependencies": {
-    "concurrently": "^9.1.0"
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.1"
   }
 }
