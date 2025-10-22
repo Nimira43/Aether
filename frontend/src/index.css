@@ -32,3 +32,7 @@
 .input-field {
   @apply px-3 py-2 outline-none border border-grey-medium focus:border-grey-dark
 }
+
+.centre {
+  @apply flex items-center justify-center
+}
