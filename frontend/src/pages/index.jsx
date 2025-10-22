@@ -25,7 +25,7 @@ const Index = () => {
             ? 'visible opacity-100' 
             : 'invisible opacity-30'
           } 
-          transition-all duration-500 h-screen fixed bg-light flex justify-center items-center
+          transition-all duration-500 h-screen fixed bg-light centre
         `}
       >
         <div className='w-[350px] bg-light m-auto px-6 py-4 relative border border-grey-medium shadow-md'>
@@ -70,12 +70,12 @@ const Index = () => {
                 Submit
               </button>
             </div>
-            <div className='flex py-2 justify-center items-center px-3'>
+            <div className='centre py-2 px-3'>
               <span>or</span>
             </div>
             <div className='py-2'>
               <button
-                className='flex items-center justify-center outline-btn w-full text-grey-dark'
+                className='centre outline-btn w-full text-grey-dark'
               >
                 <span className='mr-2'>
                   <BiLogoGoogle />
@@ -85,7 +85,7 @@ const Index = () => {
             </div>
             <div className='py-2'>
               <button
-                className='flex items-center justify-center outline-btn w-full'
+                className='centre outline-btn w-full'
               >
                 <span className='mr-2'>
                   <BiLogoFacebook />
