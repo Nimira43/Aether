@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { LiaTimesSolid } from 'react-icons/lia'
+import { BiLogoFacebook, BiLogoGoogle } from "react-icons/bi"
 
 const Index = () => {
   const [show, setShow] = useState(false)
@@ -37,7 +38,9 @@ const Index = () => {
           <h2 className='text-center pb-4 logo text-main text-4xl'>Login / Register</h2>
           <form>
             <div className='input-wrapper'>
-              <label htmlFor='email'>Email</label>
+              <label 
+                className='text-dark'
+                htmlFor='email'>Email</label>
               <input 
                 onChange={inputHandle}
                 type='email' 
@@ -48,7 +51,9 @@ const Index = () => {
               />
             </div>
             <div className='input-wrapper'>
-              <label htmlFor='password'>Password</label>
+              <label 
+                className='text-dark'
+                htmlFor='password'>Password</label>
               <input 
                 onChange={inputHandle}
                 type='password' 
@@ -58,13 +63,37 @@ const Index = () => {
                 className='input-field' 
               />
             </div>
-            <div className='py-4'>
+            <div className='py-2'>
               <button
-                className='dark-btn w-full'
+                className='outline-btn w-full'
               >
                 Submit
               </button>
             </div>
+            <div className='flex py-2 justify-center items-center px-3'>
+              <span>or</span>
+            </div>
+            <div className='py-2'>
+              <button
+                className='flex items-center justify-center outline-btn w-full text-grey-dark'
+              >
+                <span className='mr-2'>
+                  <BiLogoGoogle />
+                </span>
+                Login with Google
+              </button>
+            </div>
+            <div className='py-2'>
+              <button
+                className='flex items-center justify-center outline-btn w-full'
+              >
+                <span className='mr-2'>
+                  <BiLogoFacebook />
+                </span>
+                Login with Facebook
+              </button>
+            </div>
+
           </form>
         </div>
       </div>
@@ -95,7 +124,7 @@ const Index = () => {
         <div className='py-[170px] flex justify-center items-center flex-col gap-6'>
           <h2 className='logo text-main text-6xl font-semibold text-center'>Where ideas awaken and colours speak</h2>
           <span className='text-grey-dark font-medium text-xl text-center'>Aether makes it easy to create and share professional designs.</span>
-          <button className='dark-btn w-48'>Register</button>
+          <button className='outline-btn w-48'>Register</button>
         </div>
       </div>
 

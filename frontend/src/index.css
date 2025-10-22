@@ -21,7 +21,7 @@
   @apply py-2 w-24 text-center border-light border-2 text-light uppercase font-medium hover:bg-light hover:text-main hover-transition;
 }
 
-.dark-btn {
+.outline-btn {
   @apply py-2 text-center border-grey-dark border-2 text-grey-dark uppercase font-medium hover:bg-main hover:text-light hover:border-main hover-transition;
 }
 
