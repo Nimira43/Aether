@@ -1,3 +1,5 @@
+import { BiUser } from 'react-icons/bi'
+
 export default function Layout() {
   return (
     <div className='bg-light min-h-screen w-full'>
@@ -9,10 +11,13 @@ export default function Layout() {
             </div>
             <div className='relative centre gap-4'>
               <button 
-                className='main-btn'
+                className='main-btn overflow-hidden'
               >
                 Create
               </button>
+              <div>
+                <BiUser className='main-link' />
+              </div>
             </div>
           </div>
         </div>

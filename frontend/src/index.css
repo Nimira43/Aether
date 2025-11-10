@@ -44,3 +44,7 @@
 .main-btn {
   @apply py-2 w-24 text-center border-light border-2 text-light uppercase font-medium hover:bg-light hover:text-main hover-transition;
 }
+
+.main-link {
+  @apply text-3xl text-light hover:text-main-light cursor-pointer hover-transition
+}
