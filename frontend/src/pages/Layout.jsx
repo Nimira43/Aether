@@ -11,7 +11,7 @@ export default function Layout() {
               <button 
                 className='main-btn'
               >
-                Login
+                Create
               </button>
             </div>
           </div>
