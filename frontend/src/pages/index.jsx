@@ -185,12 +185,23 @@ const Index = () => {
             <div className='flex gap-4'>
               <button 
                 className='main-btn'
-                onClick={() => setShow(true)}
+                onClick={
+                  () => {
+                    setType('signin')
+                    setShow(true)
+                  }
+                }
               >
                 Login
               </button>
               <button 
                 className='main-btn'
+                onClick={
+                  () => {
+                    setType('signup')
+                    setShow(true)
+                  }
+                }
               >
                 Register
               </button>
