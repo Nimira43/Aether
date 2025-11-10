@@ -19,7 +19,10 @@
 
 .centre {
   @apply flex items-center justify-center
+}
 
+.just-between {
+  @apply flex items-center justify-between
 }
 
 .form-title {
