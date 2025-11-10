@@ -36,9 +36,10 @@ const Index = () => {
           >
             <LiaTimesSolid />
           </div>
-          <h2 className='text-center pb-4 logo text-main text-4xl'>Login / Register</h2>
-
+          
           {type === 'signin' &&
+          <> 
+            <h2 className='form-title'>Login</h2>
             <form>
               <div className='input-wrapper'>
                 <label 
@@ -97,9 +98,12 @@ const Index = () => {
                 </button>
               </div>
             </form>
+          </>
           }
 
           { type === 'signup' &&
+          <>
+            <h2 className='form-title'>Register</h2>
             <form>
               <div className='input-wrapper'>
                 <label 
@@ -171,6 +175,7 @@ const Index = () => {
                 </button>
               </div>
             </form>
+          </>
           }
 
         </div>
@@ -213,7 +218,17 @@ const Index = () => {
         <div className='py-[170px] centre flex-col gap-6'>
           <h2 className='logo text-main text-6xl font-semibold text-center'>Where ideas awaken and colours speak</h2>
           <span className='text-grey-dark font-medium text-xl text-center'>Aether makes it easy to create and share professional designs.</span>
-          <button className='outline-btn w-48'>Register</button>
+          <button 
+            className='outline-btn w-48'
+            onClick={
+              () => {
+                setType('signup')
+                setShow(true)
+              }
+            }
+          >
+            Register
+          </button>
         </div>
       </div>
 
