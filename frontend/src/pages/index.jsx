@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { LiaTimesSolid } from 'react-icons/lia'
-import { BiLogoFacebook, BiLogoGoogle } from "react-icons/bi"
+import { BiLogoFacebook, BiLogoGoogle } from 'react-icons/bi'
 
 const Index = () => {
+  const [type, setType] = useState('')
   const [show, setShow] = useState(false)
   const [state, setState] = useState({
     name: '',
