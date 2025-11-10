@@ -1,5 +1,3 @@
-import { BiUser } from 'react-icons/bi'
-
 export default function Layout() {
   return (
     <div className='bg-light min-h-screen w-full'>
@@ -15,8 +13,12 @@ export default function Layout() {
               >
                 Create
               </button>
-              <div>
-                <BiUser className='main-link' />
+              <div className='cursor-pointer'>
+                <img 
+                  className='w-[45px] h-[45px] rounded-full'
+                  src='/user.jpg' 
+                  alt='user'
+                />
               </div>
             </div>
           </div>
