@@ -17,16 +17,13 @@
   transition: all 0.5s ease-in-out;
 }
 
+.centre {
+  @apply flex items-center justify-center
+
+}
+
 .form-title {
   @apply text-center pb-4 logo text-main text-4xl;
-}
-
-.main-btn {
-  @apply py-2 w-24 text-center border-light border-2 text-light uppercase font-medium hover:bg-light hover:text-main hover-transition;
-}
-
-.outline-btn {
-  @apply py-2 text-center border-grey-dark border-2 text-grey-dark uppercase font-medium hover:bg-main hover:text-light hover:border-main hover-transition;
 }
 
 .input-wrapper {
@@ -37,6 +34,10 @@
   @apply px-3 py-2 outline-none border border-grey-medium focus:border-grey-dark
 }
 
-.centre {
-  @apply flex items-center justify-center
+.outline-btn {
+  @apply py-2 text-center border-grey-dark border-2 text-grey-dark uppercase font-medium hover:bg-main hover:text-light hover:border-main hover-transition;
+}
+
+.main-btn {
+  @apply py-2 w-24 text-center border-light border-2 text-light uppercase font-medium hover:bg-light hover:text-main hover-transition;
 }
