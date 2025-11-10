@@ -104,6 +104,19 @@ const Index = () => {
               <div className='input-wrapper'>
                 <label 
                   className='text-dark'
+                  htmlFor='name'>Name</label>
+                <input 
+                  onChange={inputHandle}
+                  type='text' 
+                  name='name'
+                  id='name' 
+                  value={state.name}
+                  className='input-field' 
+                />
+              </div>
+              <div className='input-wrapper'>
+                <label 
+                  className='text-dark'
                   htmlFor='email'>Email</label>
                 <input 
                   onChange={inputHandle}
@@ -159,7 +172,7 @@ const Index = () => {
               </div>
             </form>
           }
-          
+
         </div>
       </div>
 
