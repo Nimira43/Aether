@@ -37,65 +37,67 @@ const Index = () => {
             <LiaTimesSolid />
           </div>
           <h2 className='text-center pb-4 logo text-main text-4xl'>Login / Register</h2>
-          <form>
-            <div className='input-wrapper'>
-              <label 
-                className='text-dark'
-                htmlFor='email'>Email</label>
-              <input 
-                onChange={inputHandle}
-                type='email' 
-                name='email'
-                id='email' 
-                value={state.email}
-                className='input-field' 
-              />
-            </div>
-            <div className='input-wrapper'>
-              <label 
-                className='text-dark'
-                htmlFor='password'>Password</label>
-              <input 
-                onChange={inputHandle}
-                type='password' 
-                name='password'
-                id='password' 
-                value={state.password}
-                className='input-field' 
-              />
-            </div>
-            <div className='py-2'>
-              <button
-                className='outline-btn w-full'
-              >
-                Submit
-              </button>
-            </div>
-            <div className='centre py-2 px-3'>
-              <span>or</span>
-            </div>
-            <div className='py-2'>
-              <button
-                className='centre outline-btn w-full text-grey-dark'
-              >
-                <span className='mr-2'>
-                  <BiLogoGoogle />
-                </span>
-                Login with Google
-              </button>
-            </div>
-            <div className='py-2'>
-              <button
-                className='centre outline-btn w-full'
-              >
-                <span className='mr-2'>
-                  <BiLogoFacebook />
-                </span>
-                Login with Facebook
-              </button>
-            </div>
 
-          </form>
+          {type === 'signin' &&
+            <form>
+              <div className='input-wrapper'>
+                <label 
+                  className='text-dark'
+                  htmlFor='email'>Email</label>
+                <input 
+                  onChange={inputHandle}
+                  type='email' 
+                  name='email'
+                  id='email' 
+                  value={state.email}
+                  className='input-field' 
+                />
+              </div>
+              <div className='input-wrapper'>
+                <label 
+                  className='text-dark'
+                  htmlFor='password'>Password</label>
+                <input 
+                  onChange={inputHandle}
+                  type='password' 
+                  name='password'
+                  id='password' 
+                  value={state.password}
+                  className='input-field' 
+                />
+              </div>
+              <div className='py-2'>
+                <button
+                  className='outline-btn w-full'
+                >
+                  Submit
+                </button>
+              </div>
+              <div className='centre py-2 px-3'>
+                <span>or</span>
+              </div>
+              <div className='py-2'>
+                <button
+                  className='centre outline-btn w-full text-grey-dark'
+                >
+                  <span className='mr-2'>
+                    <BiLogoGoogle />
+                  </span>
+                  Login with Google
+                </button>
+              </div>
+              <div className='py-2'>
+                <button
+                  className='centre outline-btn w-full'
+                >
+                  <span className='mr-2'>
+                    <BiLogoFacebook />
+                  </span>
+                  Login with Facebook
+                </button>
+              </div>
+            </form>
+          }
         </div>
       </div>
 
