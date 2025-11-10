@@ -7,16 +7,11 @@ export default function Layout() {
             <div className='w-[80px] h-[40px]'>
               <h1 className='logo text-light text-4xl'>Aether</h1>
             </div>
-            <div className='flex gap-4'>
+            <div className='relative centre gap-4'>
               <button 
                 className='main-btn'
               >
                 Login
-              </button>
-              <button 
-                className='main-btn'
-              >
-                Register
               </button>
             </div>
           </div>
