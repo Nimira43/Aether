@@ -41,8 +41,16 @@ const Layout = () => {
                   />
                   <div className='flex justify-center flex-col item-start'>
                     <span className='text-grey-dark font-medium text-md'>Victoria</span>
+                    <span className='text-grey-dark'>victoria@user.com</span>
                   </div>
                 </div>
+                <ul className='text-grey'>
+                  <li>
+                    <Link className='p-2 cursor-pointer'>
+                      <span>Settings</span>
+                    </Link>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
