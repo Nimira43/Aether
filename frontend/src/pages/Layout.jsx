@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 const Layout = () => {
   const [show, setShow ] = useState(false)
-  
+
 
   return (
     <div className='bg-light min-h-screen w-full'>
@@ -18,7 +18,10 @@ const Layout = () => {
               >
                 Create
               </button>
-              <div className='cursor-pointer'>
+              <div 
+                onClick={() => setShow(!show)}              
+                className='cursor-pointer'
+              >
                 <img 
                   className='w-[45px] h-[45px] rounded-full'
                   src='/user.jpg' 
