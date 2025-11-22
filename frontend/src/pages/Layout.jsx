@@ -39,6 +39,9 @@ const Layout = () => {
                     src='/user.jpg' 
                     alt='user'
                   />
+                  <div className='flex justify-center flex-col item-start'>
+                    <span className='text-grey-dark font-medium text-md'>Victoria</span>
+                  </div>
                 </div>
               </div>
             </div>
