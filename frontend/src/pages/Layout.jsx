@@ -33,7 +33,9 @@ const Layout = () => {
                   ? 'visible opacity-100'
                   : 'invisible opacity-30'
               }`}>
-
+                <div className='px-2 py-2 flex justify-start gap-5 items-center'>
+                  
+                </div>
               </div>
             </div>
           </div>
