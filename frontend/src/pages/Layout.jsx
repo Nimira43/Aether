@@ -1,4 +1,9 @@
-export default function Layout() {
+import { useState } from 'react'
+
+const Layout = () => {
+  const [show, setShow ] = useState(false)
+  
+
   return (
     <div className='bg-light min-h-screen w-full'>
       <div className='bg-main shadow-md fixed left-0 top-0 w-full z-20'>
@@ -27,3 +32,5 @@ export default function Layout() {
     </div>
   )
 }
+
+export default Layout
