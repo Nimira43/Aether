@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Layout = () => {
   const [show, setShow ] = useState(false)
@@ -48,6 +49,11 @@ const Layout = () => {
                   <li>
                     <Link className='p-2 cursor-pointer'>
                       <span>Settings</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className='p-2 cursor-pointer'>
+                      <span>Logout</span>
                     </Link>
                   </li>
                 </ul>
