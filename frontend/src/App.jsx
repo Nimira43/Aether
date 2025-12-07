@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Index from './pages'
 import Layout from './pages/Layout'
 import Home from './components/Home'
+import Templates from './components/Templates'
 
 const router = createBrowserRouter([
   {
@@ -11,7 +12,12 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
-      }
+      },
+      {
+        path: '/templates',
+        element: <Templates />,
+      },
+
     ]
   }
 ])
