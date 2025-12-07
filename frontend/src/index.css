@@ -25,6 +25,14 @@
   @apply flex items-center justify-between
 }
 
+.centre-items {
+  @apply flex items-center
+}
+
+.centre-justify {
+  @apply flex justify-center
+}
+
 .form-title {
   @apply text-center pb-4 logo text-main text-4xl;
 }
