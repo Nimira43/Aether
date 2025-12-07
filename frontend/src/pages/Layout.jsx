@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { HiOutlineHome } from "react-icons/hi2"
+import { HiOutlineHome } from 'react-icons/hi2'
+import { GoProjectSymlink } from 'react-icons/go'
 
 const Layout = () => {
   const [show, setShow] = useState(false)
@@ -82,7 +83,7 @@ const Layout = () => {
                 <Link
                   to='/'
                   className={
-                    `text-light px-2 py-2 centre-items justify-start gap-2 rounded ${
+                    `text-light px-2 py-2 centre-items justify-start gap-2 rounded ${                     
                       pathname === '/'
                       ? 'bg-main-light'
                       : ''
@@ -94,6 +95,25 @@ const Layout = () => {
                   </span>
                   <span className='font-medium'>
                     Home                    
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to='/projects'
+                  className={
+                    `text-light px-2 py-2 centre-items justify-start gap-2 rounded ${
+                      pathname === '/projects'
+                      ? 'bg-main-light'
+                      : ''
+                    }` 
+                  }
+                >
+                  <span>
+                    <GoProjectSymlink />
+                  </span>
+                  <span className='font-medium'>
+                    Projects                    
                   </span>
                 </Link>
               </li>
