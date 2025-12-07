@@ -75,7 +75,14 @@ const Layout = () => {
             </div>
             <ul className='p-4 flex flex-col gap-2'>
               <li>
-                <Link />
+                <Link
+                  to='/'
+                  className={
+                    `text-light px-2 py-2 centre-items justify-start gap-2` 
+                  }
+                >
+                
+                </Link>
               </li>
             </ul>
           </div>
