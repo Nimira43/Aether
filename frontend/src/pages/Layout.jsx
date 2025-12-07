@@ -63,7 +63,17 @@ const Layout = () => {
         </div>
       </div>
       <div className='w-full flex mt-16'>
-        <div className='sidebar w-[300px] p-5 h-[calc(100ch-70px)] fixed bg-main'></div>
+        <div className='sidebar w-[300px] p-5 h-[calc(100vh-70px)] fixed bg-main'>
+          <div className='px-2 py-2 centre-items justify-start gap-5 mb-3'>
+            <img 
+              className='w-[40px] h-[40px] rounded-full'
+              src='/user.jpg' 
+              alt='user'
+            />
+          </div>
+          <div className=''></div>
+        </div>
+
       </div>
     </div>
   )
