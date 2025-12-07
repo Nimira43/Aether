@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 const Layout = () => {
   const [show, setShow ] = useState(false)
 
-
   return (
     <div className='bg-light min-h-screen w-full'>
       <div className='bg-main shadow-md fixed left-0 top-0 w-full z-20'>
@@ -70,10 +69,13 @@ const Layout = () => {
               src='/user.jpg' 
               alt='user'
             />
+            <div className='centre-justify flex-col items-start'>
+              <span className='text-light text-md font-medium'>Victoria</span>
+              <span className='text-light text-sm uppercase'>Admin</span>
+            </div>
+            
           </div>
-          <div className='centre-justify flex-col items-start'></div>
         </div>
-
       </div>
     </div>
   )
