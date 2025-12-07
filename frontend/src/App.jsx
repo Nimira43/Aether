@@ -3,6 +3,7 @@ import Index from './pages'
 import Layout from './pages/Layout'
 import Home from './components/Home'
 import Templates from './components/Templates'
+import Projects from './components/Projects'
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: '/templates',
         element: <Templates />,
+      },
+      {
+        path: '/projects',
+        element: <Projects />,
       },
 
     ]
