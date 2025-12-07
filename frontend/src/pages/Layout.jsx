@@ -34,13 +34,13 @@ const Layout = () => {
                   ? 'visible opacity-100'
                   : 'invisible opacity-30'
               }`}>
-                <div className='px-2 py-2 flex justify-start gap-5 items-center'>
+                <div className='px-2 py-2 centre-items justify-start gap-5'>
                   <img 
                     className='w-[40px] h-[40px] rounded-full'
                     src='/user.jpg' 
                     alt='user'
                   />
-                  <div className='flex justify-center flex-col item-start'>
+                  <div className='centre-justify flex-col item-start'>
                     <span className='text-grey-dark font-medium text-md'>Victoria</span>
                     <span className='text-grey-dark'>victoria@user.com</span>
                   </div>
@@ -71,7 +71,7 @@ const Layout = () => {
               alt='user'
             />
           </div>
-          <div className=''></div>
+          <div className='centre-justify flex-col items-start'></div>
         </div>
 
       </div>
