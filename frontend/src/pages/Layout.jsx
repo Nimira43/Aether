@@ -62,6 +62,9 @@ const Layout = () => {
           </div>
         </div>
       </div>
+      <div className='w-full flex mt-16'>
+        <div className='sidebar w-[300px] p-5 h-[calc(100ch-70px)] fixed bg-main'></div>
+      </div>
     </div>
   )
 }
