@@ -73,7 +73,11 @@ const Layout = () => {
               <span className='text-light text-md font-medium'>Victoria</span>
               <span className='text-light text-sm uppercase'>Admin</span>
             </div>
-            
+            <ul className='p-4 flex flex-col gap-2'>
+              <li>
+                <Link />
+              </li>
+            </ul>
           </div>
         </div>
       </div>
