@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { HiOutlineHome } from "react-icons/hi2"
 
 const Layout = () => {
   const [show, setShow] = useState(false)
@@ -74,19 +75,29 @@ const Layout = () => {
               <span className='text-light text-md font-medium'>Victoria</span>
               <span className='text-light text-sm uppercase'>Admin</span>
             </div>
-            <ul className='p-4 flex flex-col gap-2'>
+            
+          </div>
+            <ul className='px-4 flex flex-col gap-2'>
               <li>
                 <Link
                   to='/'
                   className={
-                    `text-light px-2 py-2 centre-items justify-start gap-2` 
+                    `text-light px-2 py-2 centre-items justify-start gap-2 rounded ${
+                      pathname === '/'
+                      ? 'bg-main-light'
+                      : ''
+                    }` 
                   }
                 >
-                
+                  <span>
+                    <HiOutlineHome />
+                  </span>
+                  <span className='font-medium'>
+                    Home                    
+                  </span>
                 </Link>
               </li>
             </ul>
-          </div>
         </div>
       </div>
     </div>
