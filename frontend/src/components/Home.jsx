@@ -1,11 +1,11 @@
 const Home = () => {
   return ( 
     <div className='pt-1 pl-3'>
-      <div className='w-full centre h-[250px] bg-main-medium relative rounded-md overflow-hidden'>
+      <div className='w-full centre h-[250px] bg-main-medium relative rounded overflow-hidden'>
         <button 
-          className='main-btn overflow-hidden absolute top-3 right-3'
+          className='main-btn px-4 overflow-hidden absolute top-3 right-3'
         >
-          Create
+          Custom Size
         </button>
         
         <div>

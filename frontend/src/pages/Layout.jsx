@@ -18,7 +18,7 @@ const Layout = () => {
             </div>
             <div className='relative centre gap-4'>
               <button 
-                className='main-btn overflow-hidden'
+                className='main-btn w-24 overflow-hidden'
               >
                 Create
               </button>
