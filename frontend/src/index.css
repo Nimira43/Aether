@@ -38,15 +38,15 @@
 }
 
 .input-wrapper {
-  @apply flex flex-col gap-3 mb-3 text-grey-dark;
+  @apply flex flex-col gap-3 mb-3 text-grey-1;
 }
 
 .input-field {
-  @apply px-3 py-2 outline-none border border-grey-medium focus:border-grey-dark
+  @apply px-3 py-2 outline-none border border-grey-2 focus:border-grey-1
 }
 
 .outline-btn {
-  @apply py-2 text-center border-grey-dark border-2 text-grey-dark uppercase font-medium hover:bg-main hover:text-light hover:border-main hover-transition;
+  @apply py-2 text-center border-grey-1 border-2 text-grey-1 uppercase font-medium hover:bg-main hover:text-light hover:border-main hover-transition;
 }
 
 .main-btn {
