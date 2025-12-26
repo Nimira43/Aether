@@ -7,6 +7,10 @@ const Home = () => {
     height: 0
   })
 
+  const inputHandle = (e) => {
+    
+  }
+
   return ( 
     <div className='pt-1 pl-3'>
       <div className='w-full centre h-[250px] bg-main-medium relative rounded overflow-hidden'>
