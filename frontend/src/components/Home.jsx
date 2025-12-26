@@ -18,13 +18,8 @@ const Home = () => {
                 : 'invisible opacity-30'
             }`
           }>
-          <div className='px-2 py-2 centre-items justify-start gap-5'>
-            <img 
-              className='w-[40px] h-[40px] rounded-full'
-              src='/user.jpg' 
-              alt='user'
-            />
-            <div className='centre-justify flex-col item-start'>
+          <div className='grid grid-cols-2 pb-4 gap-3'>
+            <div className='centre-justify gap-2 flex-col item-start'>
               <span className='text-grey-1 font-medium text-md'>Victoria</span>
               <span className='text-grey-1'>victoria@user.com</span>
             </div>
