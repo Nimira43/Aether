@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { HiOutlineHome } from 'react-icons/hi2'
 import { GoProjectSymlink } from 'react-icons/go'
+import { TbTemplate } from 'react-icons/tb'
 
 const Layout = () => {
   const [show, setShow] = useState(false)
@@ -129,7 +130,7 @@ const Layout = () => {
                   }
                 >
                   <span>
-                    <GoProjectSymlink />
+                    <TbTemplate />
                   </span>
                   <span className='font-medium'>
                     Templates                    
