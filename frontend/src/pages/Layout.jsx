@@ -35,7 +35,7 @@ const Layout = () => {
                   `absolute top-[60px] right-0 w-[250px] bg-light p-3 border-2 border-main transitioning shadow-md ${
                     show
                       ? 'visible opacity-100'
-                      : 'invisible opacity-30'
+                      : 'invisible opacity-0'
                   }`
                 }>
                 <div className='px-2 py-2 centre-items justify-start gap-5'>

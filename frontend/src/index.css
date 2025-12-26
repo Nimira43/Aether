@@ -9,6 +9,13 @@
   font-weight: 300;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+
+}
+
 .logo {
   font-family: 'Arizonia', cursive;
 }
@@ -46,7 +53,7 @@
 }
 
 .outline-btn {
-  @apply py-2 text-center border-grey-1 border-2 text-grey-1 uppercase font-medium hover:bg-main hover:text-light hover:border-main transitioning;
+  @apply py-2 rounded text-center border-grey-1 border-2 text-grey-1 uppercase font-medium hover:bg-main hover:text-light hover:border-main transitioning;
 }
 
 .main-btn {
