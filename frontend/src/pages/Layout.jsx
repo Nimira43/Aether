@@ -17,9 +17,7 @@ const Layout = () => {
               <h1 className='logo text-light text-4xl'>Aether</h1>
             </div>
             <div className='relative centre gap-4'>
-              <button 
-                className='main-btn w-24 overflow-hidden'
-              >
+              <button className='main-btn w-24 overflow-hidden'>
                 Create
               </button>
               <div 
@@ -32,11 +30,14 @@ const Layout = () => {
                   alt='user'
                 />
               </div>
-              <div className={`absolute top-[60px] right-0 w-[250px] bg-light p-3 border-2 border-main hover-transition shadow-md ${
-                show
-                  ? 'visible opacity-100'
-                  : 'invisible opacity-30'
-              }`}>
+              <div
+                className={
+                  `absolute top-[60px] right-0 w-[250px] bg-light p-3 border-2 border-main hover-transition shadow-md ${
+                    show
+                      ? 'visible opacity-100'
+                      : 'invisible opacity-30'
+                  }`
+                }>
                 <div className='px-2 py-2 centre-items justify-start gap-5'>
                   <img 
                     className='w-[40px] h-[40px] rounded-full'
