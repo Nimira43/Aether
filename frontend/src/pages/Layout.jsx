@@ -117,6 +117,25 @@ const Layout = () => {
                   </span>
                 </Link>
               </li>
+              <li>
+                <Link
+                  to='/templates'
+                  className={
+                    `text-light px-2 py-2 centre-items justify-start gap-2 rounded ${
+                      pathname === '/templates'
+                      ? 'bg-main-light'
+                      : ''
+                    }` 
+                  }
+                >
+                  <span>
+                    <GoProjectSymlink />
+                  </span>
+                  <span className='font-medium'>
+                    Templates                    
+                  </span>
+                </Link>
+              </li>
             </ul>
         </div>
       </div>
