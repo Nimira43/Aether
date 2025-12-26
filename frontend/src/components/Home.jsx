@@ -2,13 +2,16 @@ import { useState } from 'react'
 
 const Home = () => {
   const [show, setShow] = useState(false)
-  const [state, saveState] = useState({
+  const [state, setState] = useState({
     width: 0,
     height: 0
   })
 
   const inputHandle = (e) => {
-    
+    setState({
+      ...state,
+      [e.target.name]: e.target.value
+    })
   }
 
   return ( 
