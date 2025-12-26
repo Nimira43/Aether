@@ -26,7 +26,7 @@ const Index = () => {
             ? 'visible opacity-100' 
             : 'invisible opacity-30'
           } 
-          transition-all duration-500 h-screen fixed bg-light centre
+          transitioning h-screen fixed bg-light centre
         `}
       >
         <div className='w-[350px] bg-light m-auto px-6 py-4 relative border border-grey-2 shadow-md'>

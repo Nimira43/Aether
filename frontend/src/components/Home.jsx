@@ -12,7 +12,7 @@ const Home = () => {
 
         <form
           className={
-            `absolute top-16 right-3 gap-3 w-[250px] bg-light p-4 border-2 border-main hover-transition shadow-md ${
+            `absolute top-16 right-3 gap-3 w-[250px] bg-light p-4 border-2 border-main transitioning shadow-md ${
               show
                 ? 'visible opacity-100'
                 : 'invisible opacity-30'
@@ -30,7 +30,7 @@ const Home = () => {
                 type='number'
                 name='width'
                 id='width'
-                className='input-field'
+                className='w-full px-2 py-[4px] input-field'
               />
               <span className='text-grey-1'>victoria@user.com</span>
             </div>
