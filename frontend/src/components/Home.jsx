@@ -3,7 +3,8 @@ import { useState } from 'react'
 const Home = () => {
   const [show, setShow] = useState(false)
   const [state, saveState] = useState({
-    
+    width: 0,
+    height: 0
   })
 
   return ( 
