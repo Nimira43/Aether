@@ -1,7 +1,9 @@
 const Home = () => {
   return ( 
     <div className='pt-5 pl-3'>
-      Home
+      <div className='w-full centre h-[250px] bg-main-light relative rounded-md overflow-hidden'>
+
+      </div>
     </div>
    )
 }
