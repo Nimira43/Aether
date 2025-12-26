@@ -29,10 +29,10 @@ const Index = () => {
           transition-all duration-500 h-screen fixed bg-light centre
         `}
       >
-        <div className='w-[350px] bg-light m-auto px-6 py-4 relative border border-grey-medium shadow-md'>
+        <div className='w-[350px] bg-light m-auto px-6 py-4 relative border border-grey-2 shadow-md'>
           <div 
             onClick={() => setShow(false)}
-            className='absolute right-4 top-4 text-xl cursor-pointer text-grey-dark'
+            className='absolute right-4 top-4 text-xl cursor-pointer text-grey-1'
           >
             <LiaTimesSolid />
           </div>
@@ -156,7 +156,7 @@ const Index = () => {
               </div>
               <div className='py-2'>
                 <button
-                  className='centre outline-btn w-full text-grey-dark'
+                  className='centre outline-btn w-full text-grey-1'
                 >
                   <span className='mr-2'>
                     <BiLogoGoogle />
@@ -217,7 +217,7 @@ const Index = () => {
       <div className='w-full h-full p-4'>
         <div className='py-[170px] centre flex-col gap-6'>
           <h2 className='logo text-main text-6xl font-semibold text-center'>Where ideas awaken and colours speak</h2>
-          <span className='text-grey-dark font-medium text-xl text-center'>Aether makes it easy to create and share professional designs.</span>
+          <span className='text-grey-1 font-medium text-xl text-center'>Aether makes it easy to create and share professional designs.</span>
           <button 
             className='outline-btn w-48'
             onClick={

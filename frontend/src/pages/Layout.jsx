@@ -44,8 +44,8 @@ const Layout = () => {
                     alt='user'
                   />
                   <div className='centre-justify flex-col item-start'>
-                    <span className='text-grey-dark font-medium text-md'>Victoria</span>
-                    <span className='text-grey-dark'>victoria@user.com</span>
+                    <span className='text-grey-1 font-medium text-md'>Victoria</span>
+                    <span className='text-grey-1'>victoria@user.com</span>
                   </div>
                 </div>
                 <ul className='text-grey'>
