@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, Outlet, useLocation } from 'react-router-dom'
 import { HiOutlineHome } from 'react-icons/hi2'
 import { GoProjectSymlink } from 'react-icons/go'
 import { TbTemplate } from 'react-icons/tb'
@@ -138,6 +138,12 @@ const Layout = () => {
                 </Link>
               </li>
             </ul>
+        </div>
+
+        <div className='ml-[300px] w-[calc(100% - 300px)]'>
+          <div className='py-4 pr-4'>
+            <Outlet />
+          </div>
         </div>
       </div>
     </div>
