@@ -10,9 +10,9 @@ const Home = () => {
           Custom Size
         </button>
 
-        <div
+        <form
           className={
-            `absolute top-[60px] right-0 w-[250px] bg-light p-3 border-2 border-main hover-transition shadow-md ${
+            `absolute top-16 right-3 gap-3 w-[250px] bg-light p-4 border-2 border-main hover-transition shadow-md ${
               show
                 ? 'visible opacity-100'
                 : 'invisible opacity-30'
@@ -31,17 +31,17 @@ const Home = () => {
           </div>
           <ul className='text-grey'>
             <li>
-              <Link className='p-2 cursor-pointer'>
+              <a className='p-2 cursor-pointer'>
                 <span>Settings</span>
-              </Link>
+              </a>
             </li>
             <li>
-              <Link className='p-2 cursor-pointer'>
+              <a className='p-2 cursor-pointer'>
                 <span>Logout</span>
-              </Link>
+              </a>
             </li>
           </ul>
-        </div>        
+        </form>        
         <div>
           <h2 className='text-3xl pb-10 pt-6 font-medium text-light'>What will you create today?</h2>
         </div>
