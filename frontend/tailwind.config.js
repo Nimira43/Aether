@@ -8,7 +8,9 @@ export default {
     extend: {
       colors: {
         'main': '#2965dc',
+        'main-medium': '#5fa3eb',
         'main-light': '#8ec5f6',
+        'main-white': '#e8f2ff',
   			'support': '#f62222',
         'gold': '#ffd700',
   			'light': '#fbfdff',
@@ -17,7 +19,7 @@ export default {
   			'grey-2': '#999',
   			'grey-3': '#ccc',
         'grey-4': '#eee',
-        'grey-5': '#f5f5f5'
+        'grey-5': '#fafafa'
       },
     },
   },
