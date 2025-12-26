@@ -51,7 +51,7 @@ const Index = () => {
                   name='email'
                   id='email' 
                   value={state.email}
-                  className='input-field' 
+                  className='px-3 py-2 input-field' 
                 />
               </div>
               <div className='input-wrapper'>
@@ -64,7 +64,7 @@ const Index = () => {
                   name='password'
                   id='password' 
                   value={state.password}
-                  className='input-field' 
+                  className='px-3 py-2 input-field' 
                 />
               </div>
               <div className='py-2'>
@@ -115,7 +115,7 @@ const Index = () => {
                   name='name'
                   id='name' 
                   value={state.name}
-                  className='input-field' 
+                  className='px-3 py-2 input-field' 
                 />
               </div>
               <div className='input-wrapper'>
@@ -128,7 +128,7 @@ const Index = () => {
                   name='email'
                   id='email' 
                   value={state.email}
-                  className='input-field' 
+                  className='px-3 py-2 input-field' 
                 />
               </div>
               <div className='input-wrapper'>
@@ -141,7 +141,7 @@ const Index = () => {
                   name='password'
                   id='password' 
                   value={state.password}
-                  className='input-field' 
+                  className='px-3 py-2 input-field' 
                 />
               </div>
               <div className='py-2'>

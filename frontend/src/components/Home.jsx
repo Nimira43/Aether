@@ -20,7 +20,18 @@ const Home = () => {
           }>
           <div className='grid grid-cols-2 pb-4 gap-3'>
             <div className='centre-justify gap-2 flex-col item-start'>
-              <span className='text-grey-1 font-medium text-md'>Victoria</span>
+              <label
+                htmlFor='width'
+                className='text-grey-1 font-medium text-md'
+              >
+                Width
+              </label>
+              <input
+                type='number'
+                name='width'
+                id='width'
+                className='input-field'
+              />
               <span className='text-grey-1'>victoria@user.com</span>
             </div>
           </div>
