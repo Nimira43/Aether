@@ -30,6 +30,7 @@ const Home = () => {
                 Width
               </label>
               <input
+                onChange={inputHandle}
                 type='number'
                 name='width'
                 id='width'
@@ -44,6 +45,7 @@ const Home = () => {
                 Height
               </label>
               <input
+                onChange={inputHandle}
                 type='number'
                 name='height'
                 id='height'
