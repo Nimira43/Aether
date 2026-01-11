@@ -32,7 +32,7 @@ const Layout = () => {
               </div>
               <div
                 className={
-                  `absolute top-[60px] right-0 w-[250px] bg-light p-3 border-2 border-main transitioning shadow-md ${
+                  `absolute top-[60px] right-0 w-[250px] bg-light p-3 border-2 border-main transitioning rounded shadow-md ${
                     show
                       ? 'visible opacity-100'
                       : 'invisible opacity-0'

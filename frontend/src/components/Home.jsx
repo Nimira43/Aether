@@ -1,4 +1,8 @@
 import { useState } from 'react'
+import Carousel from 'react-multi-carousel'
+import { Link } from 'react-router-dom'
+import 'react-multi-carousel/lib/styles.css'
+import { GrTrash } from 'react-icons/gr'
 
 const Home = () => {
   const [show, setShow] = useState(false)
@@ -14,6 +18,25 @@ const Home = () => {
     })
   }
 
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 3
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    },
+  }
+
   return ( 
     <div className='pt-1 pl-3'>
       <div className='w-full centre h-[250px] bg-main-medium relative rounded overflow-hidden'>
@@ -26,7 +49,7 @@ const Home = () => {
 
         <form
           className={
-            `absolute top-16 right-3 gap-3 w-[250px] bg-light p-4 border-2 border-main transitioning shadow-md ${
+            `absolute top-16 right-3 gap-3 w-[250px] bg-light p-4 border-2 border-main transitioning rounded shadow-md ${
               show
                 ? 'visible opacity-100'
                 : 'invisible opacity-0'
@@ -73,6 +96,38 @@ const Home = () => {
         <div>
           <h2 className='text-3xl pb-10 pt-6 font-medium text-light'>What will you create today?</h2>
         </div>
+      </div>
+      <div>
+        <h2 className='text-xl py-6 font-semibold text-dark'>Recent Designs</h2>
+      </div>
+      <div>
+        <Carousel
+          autoplay={true}
+          infinite={true}
+          responsive={responsive}
+          transitionDuration={500}
+        >
+          {
+            [1, 2, 3, 4, 5, 6, 7, 8].map((d, i) => (
+              <div className='relative group w-full h-[170px] px-2'>
+                <Link
+                  className='w-full h-full block bg-main-medium p-4 rounded'
+                >
+                  <img
+                    className='w-full h-full rounded overflow-hidden'
+                    src='/smiley.png'
+                    alt="Smiley"
+                  />
+                </Link>
+                <div className='absolute hidden cursor-pointer top-1 right-2 text-light p-2 transitioning group-hover:block'>
+                  <GrTrash />
+                </div>
+              </div>
+            ))
+          
+          }
+          
+        </Carousel>
       </div>
     </div>
    )
