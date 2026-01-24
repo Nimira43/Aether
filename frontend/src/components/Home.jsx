@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import Carousel from 'react-multi-carousel'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import 'react-multi-carousel/lib/styles.css'
 import { GrTrash } from 'react-icons/gr'
 
 const Home = () => {
+  const navigate = useNavigate()
   const [show, setShow] = useState(false)
   const [state, setState] = useState({
     width: 0,
@@ -35,6 +36,16 @@ const Home = () => {
       breakpoint: { max: 464, min: 0 },
       items: 1
     },
+  }
+
+  const create = () => {
+    navigate('/design/create', {
+      state: {
+        type: 'create',
+        width: state.width,
+        height: state.height
+      }
+    })
   }
 
   return ( 
@@ -88,6 +99,7 @@ const Home = () => {
             </div>  
           </div>
           <button 
+            onChange={create}
             className='outline-btn px-4 overflow-hidden w-full'
           >
           Create New Design
@@ -124,9 +136,7 @@ const Home = () => {
                 </div>
               </div>
             ))
-          
           }
-          
         </Carousel>
       </div>
     </div>

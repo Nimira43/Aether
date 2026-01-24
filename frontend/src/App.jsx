@@ -3,6 +3,7 @@ import Layout from './pages/Layout'
 import Home from './components/Home'
 import Templates from './components/Templates'
 import Projects from './components/Projects'
+import CreateDeign from './components/CreateDesign'
 
 const router = createBrowserRouter([
   {
@@ -21,8 +22,11 @@ const router = createBrowserRouter([
         path: '/projects',
         element: <Projects />,
       },
-
     ]
+  },
+  {
+    path: '/design/create',
+    element: <CreateDeign />,
   }
 ])
 
