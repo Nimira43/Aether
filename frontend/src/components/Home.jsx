@@ -99,7 +99,8 @@ const Home = () => {
             </div>  
           </div>
           <button 
-            onChange={create}
+            type='button'
+            onClick={create}
             className='outline-btn px-4 overflow-hidden w-full'
           >
           Create New Design
@@ -121,7 +122,9 @@ const Home = () => {
         >
           {
             [1, 2, 3, 4, 5, 6, 7, 8].map((d, i) => (
-              <div className='relative group w-full h-[170px] px-2'>
+              <div
+                key={i}
+                className='relative group w-full h-[170px] px-2'>
                 <Link
                   className='w-full h-full block bg-main-medium p-4 rounded'
                 >
