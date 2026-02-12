@@ -17,7 +17,7 @@ const Layout = () => {
               <h1 className='logo text-light text-4xl'>Aether</h1>
             </div>
             <div className='relative centre gap-4'>
-              <button className='main-btn w-24 overflow-hidden'>
+              <button className='main-btn py-2 w-24 overflow-hidden'>
                 Create
               </button>
               <div 
@@ -87,7 +87,7 @@ const Layout = () => {
                   className={
                     `text-light px-2 py-2 centre-items justify-start gap-2 rounded ${                     
                       pathname === '/'
-                      ? 'bg-main-light'
+                      ? 'bg-main-light text-main'
                       : ''
                     }` 
                   }
@@ -106,7 +106,7 @@ const Layout = () => {
                   className={
                     `text-light px-2 py-2 centre-items justify-start gap-2 rounded ${
                       pathname === '/projects'
-                      ? 'bg-main-light'
+                      ? 'bg-main-light text-main'
                       : ''
                     }` 
                   }
@@ -125,7 +125,7 @@ const Layout = () => {
                   className={
                     `text-light px-2 py-2 centre-items justify-start gap-2 rounded ${
                       pathname === '/templates'
-                      ? 'bg-main-light'
+                      ? 'bg-main-light text-main'
                       : ''
                     }` 
                   }

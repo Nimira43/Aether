@@ -53,7 +53,7 @@ const Home = () => {
       <div className='w-full centre h-[250px] bg-main-medium relative rounded overflow-hidden'>
         <button
           onClick={() => setShow(!show)}  
-          className='main-btn px-4 overflow-hidden absolute top-3 right-3'
+          className='main-btn px-4 py-2 overflow-hidden absolute top-3 right-3'
         >
           Custom Size
         </button>
@@ -101,7 +101,7 @@ const Home = () => {
           <button 
             type='button'
             onClick={create}
-            className='outline-btn px-4 overflow-hidden w-full'
+            className='outline-btn px-4 py-2 overflow-hidden w-full'
           >
           Create New Design
         </button>

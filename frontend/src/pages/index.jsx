@@ -69,7 +69,7 @@ const Index = () => {
               </div>
               <div className='py-2'>
                 <button
-                  className='outline-btn w-full'
+                  className='outline-btn py-2 w-full'
                 >
                   Submit
                 </button>
@@ -79,7 +79,7 @@ const Index = () => {
               </div>
               <div className='py-2'>
                 <button
-                  className='centre outline-btn w-full'
+                  className='centre outline-btn py-2 w-full'
                 >
                   <span className='mr-2'>
                     <BiLogoGoogle />
@@ -89,7 +89,7 @@ const Index = () => {
               </div>
               <div className='py-2'>
                 <button
-                  className='centre outline-btn w-full'
+                  className='centre outline-btn py-2 w-full'
                 >
                   <span className='mr-2'>
                     <BiLogoFacebook />
@@ -146,7 +146,7 @@ const Index = () => {
               </div>
               <div className='py-2'>
                 <button
-                  className='outline-btn w-full'
+                  className='outline-btn py-2 w-full'
                 >
                   Submit
                 </button>
@@ -156,7 +156,7 @@ const Index = () => {
               </div>
               <div className='py-2'>
                 <button
-                  className='centre outline-btn w-full text-grey-1'
+                  className='centre outline-btn w-full py-2'
                 >
                   <span className='mr-2'>
                     <BiLogoGoogle />
@@ -166,7 +166,7 @@ const Index = () => {
               </div>
               <div className='py-2'>
                 <button
-                  className='centre outline-btn w-full'
+                  className='centre outline-btn w-full py-2'
                 >
                   <span className='mr-2'>
                     <BiLogoFacebook />
@@ -189,7 +189,7 @@ const Index = () => {
             </div>
             <div className='flex gap-4'>
               <button 
-                className='main-btn'
+                className='main-btn py-2'
                 onClick={
                   () => {
                     setType('signin')
@@ -200,7 +200,7 @@ const Index = () => {
                 Login
               </button>
               <button 
-                className='main-btn'
+                className='main-btn py-2'
                 onClick={
                   () => {
                     setType('signup')
@@ -219,7 +219,7 @@ const Index = () => {
           <h2 className='logo text-main text-6xl font-semibold text-center'>Where ideas awaken and colours speak</h2>
           <span className='text-grey-1 font-medium text-xl text-center'>Aether makes it easy to create and share professional designs.</span>
           <button 
-            className='outline-btn w-48'
+            className='outline-btn py-2 w-48'
             onClick={
               () => {
                 setType('signup')
