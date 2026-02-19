@@ -14,8 +14,7 @@ const Header = () => {
             </button>
             <button className='main-btn px-3 py-[6px] outline-none'>
               Download
-            </button>
-            
+          </button>
           </div>
         
         </div>
