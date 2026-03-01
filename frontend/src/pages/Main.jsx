@@ -8,6 +8,7 @@ import { GoImage } from 'react-icons/go'
 import { TbBackground } from 'react-icons/tb'
 import { FiChevronLeft } from 'react-icons/fi'
 import { useState } from 'react'
+import TemplateDesign from '../components/main/TemplateDesign'
 
 const Main = () => {
   const [state, setState] = useState('')
@@ -32,7 +33,10 @@ const Main = () => {
           
           <div
             onClick={() => setElements('design', 'design')}
-            className={`w-full h-[80px] cursor-pointer centre flex-col gap-1 hover:text-main hover:bg-light transitioning`}
+            className={`
+              ${show.name === 'design' ? 'bg-dark' : ''}  
+              w-full h-[80px] cursor-pointer centre flex-col gap-1 hover:bg-dark transitioning
+            `}
           >
             <span className='text-2xl'>
               <IoColorPaletteOutline />
@@ -42,7 +46,10 @@ const Main = () => {
 
           <div
             onClick={() => setElements('shape', 'shape')}
-            className={`w-full h-[80px] cursor-pointer centre flex-col gap-1 hover:text-main hover:bg-light transitioning`}
+            className={`
+              ${show.name === 'shape' ? 'bg-dark' : ''}  
+              w-full h-[80px] cursor-pointer centre flex-col gap-1 hover:bg-dark transitioning
+            `}
           >
             <span className='text-2xl'>
               <PiShapes />
@@ -52,7 +59,10 @@ const Main = () => {
 
           <div
             onClick={() => setElements('image', 'uploadImage')}
-            className={`w-full h-[80px] cursor-pointer centre flex-col gap-1 hover:text-main hover:bg-light transitioning`}
+            className={`
+              ${show.name === 'uploadImage' ? 'bg-dark' : ''}  
+              w-full h-[80px] cursor-pointer centre flex-col gap-1 hover:bg-dark transitioning
+            `}
           >
             <span className='text-2xl'>
               <RiGalleryUploadLine />
@@ -62,7 +72,10 @@ const Main = () => {
 
           <div
             onClick={() => setElements('text', 'text')}
-            className={`w-full h-[80px] cursor-pointer centre flex-col gap-1 hover:text-main hover:bg-light transitioning`}
+            className={`
+              ${show.name === 'text' ? 'bg-dark' : ''}  
+              w-full h-[80px] cursor-pointer centre flex-col gap-1 hover:bg-dark transitioning
+            `}
           >
             <span className='text-2xl'>
               <RxText />
@@ -72,7 +85,10 @@ const Main = () => {
 
           <div
             onClick={() => setElements('project', 'projects')}
-            className={`w-full h-[80px] cursor-pointer centre flex-col gap-1 hover:text-main hover:bg-light transitioning`}
+            className={`
+              ${show.name === 'projects' ? 'bg-dark' : ''}  
+              w-full h-[80px] cursor-pointer centre flex-col gap-1 hover:bg-dark transitioning
+            `}
           >
             <span className='text-2xl'>
               <LiaProjectDiagramSolid />
@@ -82,7 +98,10 @@ const Main = () => {
 
           <div
             onClick={() => setElements('initImage', 'images')}
-            className={`w-full h-[80px] cursor-pointer centre flex-col gap-1 hover:text-main hover:bg-light transitioning`}
+            className={`
+              ${show.name === 'images' ? 'bg-dark' : ''}  
+              w-full h-[80px] cursor-pointer centre flex-col gap-1 hover:bg-dark transitioning
+            `}
           >
             <span className='text-2xl'>
               <GoImage />
@@ -92,7 +111,11 @@ const Main = () => {
           
           <div
             onClick={() => setElements('background', 'background')}
-            className={`w-full h-[80px] cursor-pointer centre flex-col gap-1 hover:text-main hover:bg-light transitioning`}>
+            className={`
+              ${show.name === 'background' ? 'bg-dark' : ''}  
+              w-full h-[80px] cursor-pointer centre flex-col gap-1 hover:bg-dark transitioning
+            `}
+          >
             <span className='text-2xl'>
               <TbBackground />
             </span>
@@ -106,14 +129,51 @@ const Main = () => {
               ${show.status
                 ? 'p-0 -left-[350px]'
                 : 'px-8 left-[75px] p-5'
-              } bg-light h-full fixed transition-all w-[350px] z-30 duration-700'
+              } bg-dark h-full fixed transition-all w-[350px] z-30 duration-700'
             `}
           >
             <div
               onClick={() => setShow({name: '', status: true })}
-              className='centre absolute bg-main w-[20px] -right-2 text-light top-[40%] cursor-pointer h-[100px] rounded-full'>
+              className='centre absolute bg-dark w-[20px] -right-2 text-light top-[40%] cursor-pointer h-[100px] rounded-full'>
               <FiChevronLeft />
             </div>
+            {
+              state === 'design' && (
+                <div className='text-light grid grid-cols-2 gap-2'>
+                  <TemplateDesign type='main' />
+                </div>
+              )
+            }
+            {
+              state === 'shape' && (
+                <div className='text-light'>Shape</div>
+              )
+            }
+            {
+              state === 'image' && (
+                <div className='text-light'>Upload</div>
+              )
+            }
+            {
+              state === 'text' && (
+                <div className='text-light'>Text</div>
+              )
+            }
+            {
+              state === 'project' && (
+                <div className='text-light'>Project</div>
+              )
+            }
+            {
+              state === 'initImage' && (
+                <div className='text-light'>Images</div>
+              )
+            }
+            {
+              state === 'background' && (
+                <div className='text-light'>Background</div>
+              )
+            }
           </div>
         </div>
 

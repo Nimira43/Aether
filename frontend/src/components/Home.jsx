@@ -130,8 +130,8 @@ const Home = () => {
                 >
                   <img
                     className='w-full h-full rounded overflow-hidden'
-                    src='/smiley.png'
-                    alt="Smiley"
+                    src='/dragon.png'
+                    alt="Dragon"
                   />
                 </Link>
                 <div className='absolute hidden cursor-pointer top-1 right-2 text-light p-2 transitioning group-hover:block'>
