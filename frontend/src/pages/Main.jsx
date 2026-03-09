@@ -9,6 +9,7 @@ import { TbBackground } from 'react-icons/tb'
 import { FiChevronLeft } from 'react-icons/fi'
 import { useState } from 'react'
 import TemplateDesign from '../components/main/TemplateDesign'
+import MyImages from '../components/main/MyImages'
 
 const Main = () => {
   const [state, setState] = useState('')
@@ -146,12 +147,19 @@ const Main = () => {
             }
             {
               state === 'shape' && (
-                <div className='text-light'>Shape</div>
+                <div className='text-light grid grid-cols-3 gap-2'>
+                  <div className='h-[90px] bg-light cursor-pointer'></div>
+                  <div className='h-[90px] bg-light cursor-pointer rounded-full'></div>
+                  <div 
+                    className='h-[90px] bg-light cursor-pointer'
+                    style={{clipPath: 'polygon(50% 0, 100% 100%, 0 100%)'}}
+                  ></div>
+                </div>
               )
             }
             {
               state === 'image' && (
-                <div className='text-light'>Upload</div>
+                <MyImages />
               )
             }
             {
