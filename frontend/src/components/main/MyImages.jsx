@@ -1,3 +1,5 @@
+import Image from "../image"
+
 const MyImages = () => {
   return (  
     <div>
@@ -13,6 +15,9 @@ const MyImages = () => {
           id='image'
           className='hidden'
         />
+      </div>
+      <div className='h-[80vh] overflow-x-auto flex justify-start items-start scrollbar-hide'>
+        <Image />
       </div>
     </div>
   )

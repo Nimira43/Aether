@@ -7,6 +7,13 @@ import { defineConfig, globalIgnores } from 'eslint/config'
 export default defineConfig([
   globalIgnores(['dist']),
   {
+    files: ['tailwind.config.js'],
+    languageOptions: {
+      sourceType: 'module',
+    },
+  },
+  {
+    
     files: ['**/*.{js,jsx}'],
     extends: [
       js.configs.recommended,
