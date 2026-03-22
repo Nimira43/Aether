@@ -13,7 +13,6 @@ export default defineConfig([
     },
   },
   {
-    
     files: ['**/*.{js,jsx}'],
     extends: [
       js.configs.recommended,

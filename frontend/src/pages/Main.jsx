@@ -164,7 +164,13 @@ const Main = () => {
             }
             {
               state === 'text' && (
-                <div className='text-light'>Text</div>
+                <div>
+                  <div className='grid grid-cols-1 gap-2'>
+                    <div className='bg-light cursor-pointer font-medium p-3 text-dark text-xl rounded-sm'>
+                      <h2>Add Text</h2>
+                    </div>
+                  </div>
+                </div>
               )
             }
             {
