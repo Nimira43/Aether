@@ -10,6 +10,7 @@ import { FiChevronLeft } from 'react-icons/fi'
 import { useState } from 'react'
 import TemplateDesign from '../components/main/TemplateDesign'
 import MyImages from '../components/main/MyImages'
+import Projects from '../components/Projects'
 
 const Main = () => {
   const [state, setState] = useState('')
@@ -175,7 +176,7 @@ const Main = () => {
             }
             {
               state === 'project' && (
-                <div className='text-light'>Project</div>
+                <Projects />
               )
             }
             {
