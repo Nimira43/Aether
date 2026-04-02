@@ -11,6 +11,7 @@ import { useState } from 'react'
 import TemplateDesign from '../components/main/TemplateDesign'
 import MyImages from '../components/main/MyImages'
 import Projects from '../components/Projects'
+import Image from '../components/image'
 
 const Main = () => {
   const [state, setState] = useState('')
@@ -181,12 +182,31 @@ const Main = () => {
             }
             {
               state === 'initImage' && (
-                <div className='text-light'>Images</div>
+                <div className='text-light h-[88vh] overflow-x-auto flex justify-start items-start scrollbar-hide'>
+                  <Image />
+                </div>
               )
             }
             {
               state === 'background' && (
-                <div className='text-light'>Background</div>
+                <div className='text-light h-[88vh] overflow-x-auto flex justify-start items-start scrollbar-hide'>
+                  <div className='grid grid-cols-2 gap-2'> 
+                    {
+                      [1, 2, 3, 4, 5, 6].map((img, i) => (
+                        <div
+                          key={i}
+                          className='w-full h-[90px] overflow-hidden rounded-sm cursor-pointer'
+                        >
+                          <img 
+                            src='/dragon.png'
+                            alt='Background'
+                            className='w-full h-full object-fit bg-light'
+                          />
+                        </div>
+                      ))
+                    }
+                  </div>
+                </div>
               )
             }
           </div>
