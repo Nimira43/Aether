@@ -1,4 +1,4 @@
-const CreateComponent = ({ info, current_component}) => {
+const CreateComponent = ({ info, currentComponent}) => {
   let html = ''
 
   if (info.name === 'main_frame') {

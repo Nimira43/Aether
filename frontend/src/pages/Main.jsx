@@ -12,9 +12,11 @@ import TemplateDesign from '../components/main/TemplateDesign'
 import MyImages from '../components/main/MyImages'
 import Projects from '../components/Projects'
 import Image from '../components/image'
+import CreateComponent from '../components/CreateComponent'
 
 const Main = () => {
   const [state, setState] = useState('')
+  const [currentComponent, setCurrentComponent] = useState('')
   const [show, setShow] = useState({
     status: true,
     name: ''
@@ -27,6 +29,36 @@ const Main = () => {
       name
     })
   } 
+
+  const [components, setComponents] = useState([
+    {
+      name: 'main_frame',
+      type: 'rect',
+      id: Math.floor((Math.random() * 100) + 1),
+      height: 500,
+      width: 650,
+      z_index: 1,
+      colour: '#fff',
+      image: '',
+      setCurrentComponent: (a) => setCurrentComponent(a)
+    }
+  ])
+
+  const moveElement = () => {
+    console.log('Move Element')
+  }
+
+  const resizeElement = () => {
+    console.log('Resize Element')
+  }
+
+  const rotateElement = () => {
+    console.log('Rotate Element')
+  }
+  
+  const removeComponent = () => {
+    console.log('Remote Component')
+  }
 
   return (  
     <div className='mni-w-screen h-screen bg-black'>
@@ -210,6 +242,35 @@ const Main = () => {
               )
             }
           </div>
+
+          <div className='w-full flex h-full'>
+            <div className={`
+              flex justify-center relative items-center h-full
+              ${!currentComponent 
+                ? 'w-full'
+                : 'w-[calc(100%-250px)] overflow-hidden'
+              }
+            `}>
+              <div className='m-w-[650px] m-h-[500px] flex justify-center items-center overflow-hidden'>
+                <div
+                  id='mainDesign'
+                  className='w-auto relative h-auto'
+                >
+                  {
+                    components.map((c, i) =>
+                      <CreateComponent
+                        key={i}
+                        info={c}
+                        currentComponent={currentComponent}
+                        removeComponent={removeComponent}
+                      />
+                    )
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
