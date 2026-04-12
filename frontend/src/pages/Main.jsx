@@ -17,6 +17,7 @@ import CreateComponent from '../components/CreateComponent'
 const Main = () => {
   const [state, setState] = useState('')
   const [currentComponent, setCurrentComponent] = useState('')
+  const [colour, setColour] = useState('')
   const [show, setShow] = useState({
     status: true,
     name: ''
@@ -61,7 +62,7 @@ const Main = () => {
   }
 
   return (  
-    <div className='mni-w-screen h-screen bg-black'>
+    <div className='min-w-screen h-screen bg-black'>
       <Header />
       <div className='flex h-[calc(100%-60px)] w-screen'>
         <div className='w-[80px] bg-main z-50 h-full text-light overflow-y-auto'>
@@ -269,6 +270,35 @@ const Main = () => {
                 </div>
               </div>
             </div>
+
+            {
+              currentComponent && (
+                <div className='h-full w-[250px] text-light bg-main px-3 py-2'>
+                  <div className='flex flex-col gap-6 items-start h-full px-3 justify-start'>
+                    <div className='flex gap-4 justify-start items-start mt-4'> 
+                      <span>Colour:</span>
+                      <label
+                        className='w-[30px], h-[30px] cursor-pointer rounded' 
+                        htmlFor='colour'
+                        style={{
+                          background: `${currentComponent.colour && currentComponent.colour !== '#fff'
+                            ? currentComponent.colour
+                            : '#eee'
+                          }`
+                        }}
+                      >
+                        <input
+                          onChange={(e) => setColour(e.target.value)}
+                          type='color'
+                          id='colour'
+                          className='invisible'
+                        />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              )
+            }
           </div>
 
         </div>

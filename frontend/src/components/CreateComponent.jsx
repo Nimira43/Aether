@@ -1,9 +1,15 @@
-const CreateComponent = ({ info, currentComponent}) => {
+const CreateComponent = ({
+  info,
+  currentComponent,
+  removeComponent
+}) => {
+
   let html = ''
 
   if (info.name === 'main_frame') {
     html =
       <div
+        onClick={() => info.setCurrentComponent(info)}
         className='hover:border-2 hover:border-main shadow-md'
         style={{
           width: info.width + 'px',
