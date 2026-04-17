@@ -7,7 +7,7 @@ import { LiaProjectDiagramSolid } from 'react-icons/lia'
 import { GoImage } from 'react-icons/go'
 import { TbBackground } from 'react-icons/tb'
 import { FiChevronLeft } from 'react-icons/fi'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import TemplateDesign from '../components/main/TemplateDesign'
 import MyImages from '../components/main/MyImages'
 import Projects from '../components/Projects'
@@ -44,6 +44,13 @@ const Main = () => {
       setCurrentComponent: (a) => setCurrentComponent(a)
     }
   ])
+
+  useEffect(() => {
+    if (currentComponent) {
+      const index = components.findIndex(c => c.id === currentComponent.id)
+      components[index].colour = colour || currentComponent.colour
+    }
+  }, [colour])
 
   const moveElement = () => {
     console.log('Move Element')
@@ -273,7 +280,7 @@ const Main = () => {
 
             {
               currentComponent && (
-                <div className='h-full w-[250px] text-light bg-main px-3 py-2'>
+                <div className='h-full w-[250px] text-light bg-dark px-3 py-2'>
                   <div className='flex flex-col gap-6 items-start h-full px-3 justify-start'>
                     <div className='flex gap-4 justify-start items-start mt-4'> 
                       <span>Colour:</span>
