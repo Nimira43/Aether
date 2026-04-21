@@ -18,6 +18,8 @@ const Main = () => {
   const [state, setState] = useState('')
   const [currentComponent, setCurrentComponent] = useState('')
   const [colour, setColour] = useState('')
+  const [image, setImage] = useState('')
+
   const [show, setShow] = useState({
     status: true,
     name: ''
@@ -48,9 +50,15 @@ const Main = () => {
   useEffect(() => {
     if (currentComponent) {
       const index = components.findIndex(c => c.id === currentComponent.id)
+      const temp = components.filter(c => c.id !== currentComponent.id)
+
+      if (currentComponent.name === 'main_frame' && image) {
+        components[index].image = image || currentComponent.image
+      }
       components[index].colour = colour || currentComponent.colour
+      setComponents([...temp, components[index]])
     }
-  }, [colour])
+  }, [colour, image])
 
   const moveElement = () => {
     console.log('Move Element')
@@ -234,10 +242,11 @@ const Main = () => {
                     {
                       [1, 2, 3, 4, 5, 6].map((img, i) => (
                         <div
+                          onClick={() => setImage('/dragon.png')}
                           key={i}
                           className='w-full h-[90px] overflow-hidden rounded-sm cursor-pointer'
                         >
-                          <img 
+                          <img
                             src='/dragon.png'
                             alt='Background'
                             className='w-full h-full object-fit bg-light'
