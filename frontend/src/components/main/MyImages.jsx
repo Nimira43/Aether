@@ -3,7 +3,7 @@ import Image from "../image"
 const MyImages = () => {
   return (  
     <div>
-      <div className='w-full h-[40px] centre  uppercase border-2 border-light text-light bg-main hover:text-main hover:bg-light rounded mb-3 transitioning'>
+      <div className='ui-btn'>
         <label 
           className='font-medium cursor-pointer'
           htmlFor='image'

@@ -1,4 +1,4 @@
-import Header from '../components/Header'
+import { useEffect, useState } from 'react'
 import { IoColorPaletteOutline } from 'react-icons/io5'
 import { PiShapes } from 'react-icons/pi'
 import { RiGalleryUploadLine } from 'react-icons/ri'
@@ -7,7 +7,7 @@ import { LiaProjectDiagramSolid } from 'react-icons/lia'
 import { GoImage } from 'react-icons/go'
 import { TbBackground } from 'react-icons/tb'
 import { FiChevronLeft } from 'react-icons/fi'
-import { useEffect, useState } from 'react'
+import Header from '../components/Header'
 import TemplateDesign from '../components/main/TemplateDesign'
 import MyImages from '../components/main/MyImages'
 import Projects from '../components/Projects'
@@ -76,12 +76,20 @@ const Main = () => {
     console.log('Remote Component')
   }
 
+  const removeBackground = () => {
+    const com = components.find(c => c.id === currentComponent.id)
+    const temp = components.filter(c => c.id !== currentComponent.id)
+    com.image = ''
+    setImage('')
+    setComponents([...temp, com])
+  }
+
   return (  
     <div className='min-w-screen h-screen bg-black'>
       <Header />
       <div className='flex h-[calc(100%-60px)] w-screen'>
+        
         <div className='w-[80px] bg-main z-50 h-full text-light overflow-y-auto'>
-          
           <div
             onClick={() => setElements('design', 'design')}
             className={`
@@ -94,7 +102,6 @@ const Main = () => {
             </span>
             <span className='text-xs font-medium'>Design</span>
           </div>
-
           <div
             onClick={() => setElements('shape', 'shape')}
             className={`
@@ -107,7 +114,6 @@ const Main = () => {
             </span>
             <span className='text-xs font-medium'>Shapes</span>
           </div>
-
           <div
             onClick={() => setElements('image', 'uploadImage')}
             className={`
@@ -120,7 +126,6 @@ const Main = () => {
             </span>
             <span className='text-xs font-medium'>Upload</span>
           </div>
-
           <div
             onClick={() => setElements('text', 'text')}
             className={`
@@ -133,7 +138,6 @@ const Main = () => {
             </span>
             <span className='text-xs font-medium'>Text</span>
           </div>
-
           <div
             onClick={() => setElements('project', 'projects')}
             className={`
@@ -146,7 +150,6 @@ const Main = () => {
             </span>
             <span className='text-xs font-medium'>Project</span>
           </div>
-
           <div
             onClick={() => setElements('initImage', 'images')}
             className={`
@@ -158,8 +161,7 @@ const Main = () => {
               <GoImage />
             </span>
             <span className='text-xs font-medium'>Images</span>  
-          </div>
-          
+          </div>  
           <div
             onClick={() => setElements('background', 'background')}
             className={`
@@ -188,78 +190,61 @@ const Main = () => {
               className='centre absolute bg-dark w-[20px] -right-2 text-light top-[40%] cursor-pointer h-[100px] rounded-full'>
               <FiChevronLeft />
             </div>
-            {
-              state === 'design' && (
-                <div className='text-light grid grid-cols-2 gap-2'>
-                  <TemplateDesign type='main' />
+            {state === 'design' && (
+              <div className='text-light grid grid-cols-2 gap-2'>
+                <TemplateDesign type='main' />
+              </div>
+            )}
+            {state === 'shape' && (
+              <div className='text-light grid grid-cols-3 gap-2'>
+                <div className='h-[90px] bg-light cursor-pointer'></div>
+                <div className='h-[90px] bg-light cursor-pointer rounded-full'></div>
+                <div 
+                  className='h-[90px] bg-light cursor-pointer'
+                  style={{clipPath: 'polygon(50% 0, 100% 100%, 0 100%)'}}
+                ></div>
+              </div>
+            )}
+            {state === 'image' && (
+              <MyImages />
+            )}
+            {state === 'text' && (
+              <div>
+                <div className='grid grid-cols-1 gap-2'>
+                  <div className='bg-light cursor-pointer font-medium p-3 text-dark text-xl rounded-sm'>
+                    <h2>Add Text</h2>
+                  </div>
                 </div>
-              )
-            }
-            {
-              state === 'shape' && (
-                <div className='text-light grid grid-cols-3 gap-2'>
-                  <div className='h-[90px] bg-light cursor-pointer'></div>
-                  <div className='h-[90px] bg-light cursor-pointer rounded-full'></div>
-                  <div 
-                    className='h-[90px] bg-light cursor-pointer'
-                    style={{clipPath: 'polygon(50% 0, 100% 100%, 0 100%)'}}
-                  ></div>
-                </div>
-              )
-            }
-            {
-              state === 'image' && (
-                <MyImages />
-              )
-            }
-            {
-              state === 'text' && (
-                <div>
-                  <div className='grid grid-cols-1 gap-2'>
-                    <div className='bg-light cursor-pointer font-medium p-3 text-dark text-xl rounded-sm'>
-                      <h2>Add Text</h2>
+              </div>
+            )}
+            {state === 'project' && (
+              <Projects />
+            )}
+            {state === 'initImage' && (
+              <div className='text-light h-[88vh] overflow-x-auto flex justify-start items-start scrollbar-hide'>
+                <Image />
+              </div>
+            )}
+            {state === 'background' && (
+              <div className='text-light h-[88vh] overflow-x-auto flex justify-start items-start scrollbar-hide'>
+                <div className='grid grid-cols-2 gap-2'> 
+                  {[1, 2, 3, 4, 5, 6].map((img, i) => (
+                    <div
+                      onClick={() => setImage('/dragon.png')}
+                      key={i}
+                      className='w-full h-[90px] overflow-hidden rounded-sm cursor-pointer'
+                    >
+                      <img
+                        src='/dragon.png'
+                        alt='Background'
+                        className='w-full h-full object-fit bg-light'
+                      />
                     </div>
-                  </div>
+                  ))}
                 </div>
-              )
-            }
-            {
-              state === 'project' && (
-                <Projects />
-              )
-            }
-            {
-              state === 'initImage' && (
-                <div className='text-light h-[88vh] overflow-x-auto flex justify-start items-start scrollbar-hide'>
-                  <Image />
-                </div>
-              )
-            }
-            {
-              state === 'background' && (
-                <div className='text-light h-[88vh] overflow-x-auto flex justify-start items-start scrollbar-hide'>
-                  <div className='grid grid-cols-2 gap-2'> 
-                    {
-                      [1, 2, 3, 4, 5, 6].map((img, i) => (
-                        <div
-                          onClick={() => setImage('/dragon.png')}
-                          key={i}
-                          className='w-full h-[90px] overflow-hidden rounded-sm cursor-pointer'
-                        >
-                          <img
-                            src='/dragon.png'
-                            alt='Background'
-                            className='w-full h-full object-fit bg-light'
-                          />
-                        </div>
-                      ))
-                    }
-                  </div>
-                </div>
-              )
-            }
+              </div>
+            )}
           </div>
-
           <div className='w-full flex h-full'>
             <div className={`
               flex justify-center relative items-center h-full
@@ -273,50 +258,57 @@ const Main = () => {
                   id='mainDesign'
                   className='w-auto relative h-auto'
                 >
-                  {
-                    components.map((c, i) =>
-                      <CreateComponent
-                        key={i}
-                        info={c}
-                        currentComponent={currentComponent}
-                        removeComponent={removeComponent}
-                      />
-                    )
-                  }
+                  {components.map((c, i) =>
+                    <CreateComponent
+                      key={i}
+                      info={c}
+                      currentComponent={currentComponent}
+                      removeComponent={removeComponent}
+                    />
+                  )}
                 </div>
               </div>
             </div>
-
-            {
-              currentComponent && (
-                <div className='h-full w-[250px] text-light bg-dark px-3 py-2'>
-                  <div className='flex flex-col gap-6 items-start h-full px-3 justify-start'>
-                    <div className='flex gap-4 justify-start items-start mt-4'> 
-                      <span>Colour:</span>
-                      <label
-                        className='w-[30px], h-[30px] cursor-pointer rounded' 
-                        htmlFor='colour'
-                        style={{
-                          background: `${currentComponent.colour && currentComponent.colour !== '#fff'
-                            ? currentComponent.colour
-                            : '#eee'
-                          }`
-                        }}
-                      >
-                        <input
-                          onChange={(e) => setColour(e.target.value)}
-                          type='color'
-                          id='colour'
-                          className='invisible'
-                        />
-                      </label>
+            {currentComponent && (
+              <div className='h-full w-[250px] text-light bg-dark px-3 py-2'>
+                <div className='flex flex-col gap-6 items-start h-full px-3 justify-start'>
+                  <div className='flex gap-4 justify-start items-start mt-4'> 
+                    <span className='mt-1 uppercase font-medium'>
+                      Colour:
+                    </span>
+                    <label
+                      className='w-[30px] h-[30px] cursor-pointer rounded' 
+                      htmlFor='colour'
+                      style={{
+                        background: `${currentComponent.colour && currentComponent.colour !== '#fff'
+                          ? currentComponent.colour
+                          : '#eee'
+                        }`
+                      }}
+                    >
+                    </label>
+                    <input
+                      onChange={(e) => setColour(e.target.value)}
+                      type='color'
+                      id='colour'
+                      className='invisible'
+                    />
                     </div>
-                  </div>
+                    {(currentComponent.name === 'main_frame' && currentComponent.image) && (
+                      <div className='ui-btn'>
+                        <span
+                        className='font-medium cursor-pointer'
+                        onClick={removeBackground}
+                        >
+                          Remove Background
+                        </span>
+                      </div>
+                    )}
+                  
                 </div>
-              )
-            }
+              </div>
+            )}
           </div>
-
         </div>
 
       </div>

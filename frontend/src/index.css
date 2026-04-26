@@ -60,6 +60,10 @@ input[type="number"]::-webkit-outer-spin-button {
   @apply rounded text-center border-light border-2 text-light uppercase font-medium hover:bg-light hover:text-main transitioning;
 }
 
+.ui-btn {
+  @apply w-full h-[40px] centre uppercase border-2 border-light text-light bg-main hover:text-main hover:bg-light rounded mb-3 transitioning;
+}
+
 .main-link {
   @apply text-3xl text-light hover:text-main-light cursor-pointer transitioning
 }
