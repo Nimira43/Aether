@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
-import { IoColorPaletteOutline } from 'react-icons/io5'
-import { PiShapes } from 'react-icons/pi'
+import { PiPalette, PiShapes } from 'react-icons/pi'
 import { RiGalleryUploadLine } from 'react-icons/ri'
 import { RxText } from 'react-icons/rx'
 import { LiaProjectDiagramSolid } from 'react-icons/lia'
@@ -73,8 +72,10 @@ const Main = () => {
     console.log('Rotate Element')
   }
   
-  const removeComponent = () => {
-    console.log('Remote Component')
+  const removeComponent = (id) => {
+    const temp = components.filter(c => c.id !== id)
+    setCurrentComponent('')
+    setComponents(temp)
   }
 
   const removeBackground = () => {
@@ -120,7 +121,7 @@ const Main = () => {
             `}
           >
             <span className='text-2xl'>
-              <IoColorPaletteOutline />
+              <PiPalette />
             </span>
             <span className='text-xs font-medium'>Design</span>
           </div>
